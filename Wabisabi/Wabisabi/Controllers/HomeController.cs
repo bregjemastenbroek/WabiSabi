@@ -15,9 +15,7 @@ namespace Wabisabi.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        string connectionString = "Server=172.16.160.21;Port=3306;Database=1100273;Uid=110273;Pwd=ACKpiCIr;";
-
-    
+        string connectionString = "Server=172.16.160.21;Port=3306;Database=110146;Uid=110146;Pwd=inf2021sql;";
 
         private List<Dish> GetDishes()
         {
