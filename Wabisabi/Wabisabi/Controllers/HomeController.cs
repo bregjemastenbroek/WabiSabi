@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MySql.Data.MySqlClient;
+using Wabisabi.database;
 using Wabisabi.Models;
 
 namespace Wabisabi.Controllers
@@ -12,6 +14,41 @@ namespace Wabisabi.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+
+        string connectionString = "Server=172.16.160.21;Port=3306;Database=1100273;Uid=110273;Pwd=ACKpiCIr;";
+
+    
+
+        private List<Dish> GetDishes()
+        {
+            List<Dish> dishes = new List<Dish>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from Dish", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int Id = Convert.ToInt32(reader["Id"]);
+                        string Naam = reader["Naam"].ToString();
+                        float Calorieen = float.Parse(reader["calorieen"].ToString());
+                        string Formaat = reader["Formaat"].ToString();
+                        int Gewicht = Convert.ToInt32(reader["Gewicht"].ToString());
+                        decimal Prijs = Decimal.Parse(reader["Prijs"].ToString());
+
+                        Dish d = new Dish
+                        {
+                        };
+                        dishes.Add(d);
+                    }
+                }
+            }
+
+            return dishes;
+        }
 
         public HomeController(ILogger<HomeController> logger)
         {
