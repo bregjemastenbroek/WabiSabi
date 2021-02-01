@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Wabisabi/.vs/Wabisabi
+/Wabisabi/Wabisabi/bin/Debug/netcoreapp3.1
+/Wabisabi/Wabisabi/obj
