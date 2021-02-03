@@ -29,9 +29,9 @@ for details on configuring this project to bundle and minify static web assets. 
     text-decoration: none; /* Remove underline from links */
 }
 
-.menubalk a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
-}
+    .menubalk a:hover {
+        background-color: #C2B9B0; /* Dark grey background on mouse-over */
+    }
 
 .menubalk a.active {
     background-color: #C2B9B0; /* Add a green color to the "active/current" link */
