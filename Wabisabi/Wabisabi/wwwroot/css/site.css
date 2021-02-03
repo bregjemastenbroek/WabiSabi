@@ -3,24 +3,40 @@ for details on configuring this project to bundle and minify static web assets. 
 
 .menubalk {
     width: 200px; /* Set a width if you like */
+    overflow: hidden;
+    background-color: #FFF;
+    position: relative;
 }
 
-    .menubalk a {
-        background-color: #FFFFFF; /* Grey background color */
-        color: black; /* Black text color */
-        display: block; /* Make the links appear below each other */
-        padding: 12px; /* Add some padding */
-        text-decoration: none; /* Remove underline from links */
-    }
+.topnav #myLinks {
+    display: none;
+}
 
-        .menubalk a:hover {
-            background-color: #ccc; /* Dark grey background on mouse-over */
-        }
+.topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
-        .menubalk a.active {
-            background-color: #4CAF50; /* Add a green color to the "active/current" link */
-            color: white;
-        }
+
+.menubalk a {
+    background-color: #FFFFFF; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.menubalk a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.menubalk a.active {
+    background-color: #C2B9B0; /* Add a green color to the "active/current" link */
+    color: white;
+}
 
 
 /* Provide sufficient contrast against white background */
