@@ -95,8 +95,9 @@ body {
 
 .titel {
     text-align: center;
-    padding: 10px;
-    font-weight: normal;
+    padding: 16px;
+    font-weight: 100;
+    font-size: 29px;
 }
 
 .top-bar {
