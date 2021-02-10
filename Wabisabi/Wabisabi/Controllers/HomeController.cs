@@ -69,8 +69,8 @@ namespace Wabisabi.Controllers
             return View();
         }
 
-    [Route("China")]
-    public IActionResult China()
+    [Route("Vietnam")]
+    public IActionResult Vietnam()
         {
             return View();
         }
