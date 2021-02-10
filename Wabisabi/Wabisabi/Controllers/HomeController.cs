@@ -58,7 +58,44 @@ namespace Wabisabi.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+    [Route("Contact")]
+    public IActionResult Contact()
+        {
+            return View();
+        }
+
+    [Route("China")]
+    public IActionResult China()
+        {
+            return View();
+        }
+
+    [Route("India")]
+    public IActionResult India()
+        {
+            return View();
+        }
+
+    [Route("Indonesie")]
+    public IActionResult Indonesie()
+        {
+            return View();
+        }
+
+    [Route("Thailand")]
+    public IActionResult Thailand()
+        {
+            return View();
+        }
+
+    [Route("Korea")]
+    public IActionResult Korea()
+        {
+            return View();
+        }
+
+    [Route("Japan")]
+    public IActionResult Japan()
         {
             return View();
         }
