@@ -5,7 +5,8 @@ for details on configuring this project to bundle and minify static web assets. 
     width: 200px; /* Set a width if you like */
     overflow: hidden;
     background-color: #FFF;
-    position: relative;
+    position: absolute;
+    top: 0px;
 }
 
 .topnav #myLinks {
@@ -93,6 +94,7 @@ body {
     margin-bottom: 60px;
     background-color: #C1DDB4;
 }
+
 .footer {
     position: absolute; 
     bottom: 0;
@@ -103,6 +105,7 @@ body {
     background-color: #FFFFFF; 
     color: #000000;
 }
+
 .container {
     color: #000000;
 }
@@ -130,6 +133,6 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 35%;
-    margin-top: -30%;
+    width: 50%;
+    margin-top: 150px;
 }
