@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Afbeeldingen\Japan1.png" />
+    <Content Remove="wwwroot\Afbeeldingen\Japan1.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Views\Home\htmlpage.html" />
   </ItemGroup>
 
