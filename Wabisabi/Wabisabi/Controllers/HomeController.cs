@@ -69,7 +69,13 @@ namespace Wabisabi.Controllers
             return View();
         }
 
-    [Route("India")]
+    [Route("Vietnam")]
+    public IActionResult Vietnam()
+        {
+            return View();
+        }
+
+        [Route("India")]
     public IActionResult India()
         {
             return View();
