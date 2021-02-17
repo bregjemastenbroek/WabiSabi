@@ -12,5 +12,7 @@ namespace Wabisabi.database
         public string Naam { get; set; }
 
         public Decimal Prijs { get; set; }
+
+        public string Afbeelding { get; set; }
     }
 }

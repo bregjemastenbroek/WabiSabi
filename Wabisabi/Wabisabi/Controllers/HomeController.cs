@@ -33,6 +33,7 @@ namespace Wabisabi.Controllers
                         int Id = Convert.ToInt32(reader["Id"]);
                         string Naam = reader["Naam"].ToString();
                         decimal Prijs = Decimal.Parse(reader["Prijs"].ToString());
+                        Afbeelding = reader["Afbeelding"].ToString(),
 
                         Dish d = new Dish
                         {
