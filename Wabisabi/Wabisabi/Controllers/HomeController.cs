@@ -30,13 +30,14 @@ namespace Wabisabi.Controllers
                 {
                     while (reader.Read())
                     {
-                        int Id = Convert.ToInt32(reader["Id"]);
-                        string Naam = reader["Naam"].ToString();
-                        decimal Prijs = Decimal.Parse(reader["Prijs"].ToString());
-                        Afbeelding = reader["Afbeelding"].ToString(),
 
                         Dish d = new Dish
                         {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Prijs = Decimal.Parse(reader["Prijs"].ToString()),
+                            Afbeelding = reader["Afbeelding"].ToString(),
+
                         };
                         dishes.Add(d);
                     }
@@ -61,12 +62,12 @@ namespace Wabisabi.Controllers
                     {
                         Country t = new Country
                         {
-                             int Id = Convert.ToInt32(reader["Id"]),
-                             string Naam = reader["Naam"].ToString(),
+                             Id = Convert.ToInt32(reader["Id"]),
+                             Naam = reader["Naam"].ToString(),
                              Beschrijving = reader["Beschrijving"].ToString(),
                              Afbeelding = reader["Afbeelding"].ToString(),
                         };
-                    countries.Add(t);
+                        countries.Add(t);
                     }
                 }
             }
@@ -78,55 +79,55 @@ namespace Wabisabi.Controllers
         {
             _logger = logger;
         }
-    public IActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
 
-    [Route("Contact")]
-    public IActionResult Contact()
+        [Route("Contact")]
+        public IActionResult Contact()
         {
             return View();
         }
 
-    [Route("China")]
-    public IActionResult China()
+        [Route("China")]
+        public IActionResult China()
         {
             return View();
         }
 
-    [Route("Vietnam")]
-    public IActionResult Vietnam()
+        [Route("Vietnam")]
+        public IActionResult Vietnam()
         {
             return View();
         }
 
         [Route("India")]
-    public IActionResult India()
+        public IActionResult India()
         {
             return View();
         }
 
-    [Route("Indonesie")]
-    public IActionResult Indonesie()
+        [Route("Indonesie")]
+        public IActionResult Indonesie()
         {
             return View();
         }
 
-    [Route("Thailand")]
-    public IActionResult Thailand()
+        [Route("Thailand")]
+        public IActionResult Thailand()
         {
             return View();
         }
 
-    [Route("Korea")]
-    public IActionResult Korea()
+        [Route("Korea")]
+        public IActionResult Korea()
         {
             return View();
         }
 
-    [Route("Japan")]
-    public IActionResult Japan()
+        [Route("Japan")]
+        public IActionResult Japan()
         {
             return View();
         }
