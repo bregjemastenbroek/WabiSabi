@@ -32,9 +32,6 @@ namespace Wabisabi.Controllers
                     {
                         int Id = Convert.ToInt32(reader["Id"]);
                         string Naam = reader["Naam"].ToString();
-                        float Calorieen = float.Parse(reader["calorieen"].ToString());
-                        string Formaat = reader["Formaat"].ToString();
-                        int Gewicht = Convert.ToInt32(reader["Gewicht"].ToString());
                         decimal Prijs = Decimal.Parse(reader["Prijs"].ToString());
 
                         Dish d = new Dish
@@ -47,6 +44,34 @@ namespace Wabisabi.Controllers
 
             return dishes;
         }
+
+        private List<Country> GetCountries()
+        {
+            List<Country> countries = new List<Country>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from Countries", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Country t = new Country
+                        {
+                             int Id = Convert.ToInt32(reader["Id"]),
+                             string Naam = reader["Naam"].ToString(),
+                             Beschrijving = reader["Beschrijving"].ToString(),
+                             Afbeelding = reader["Afbeelding"].ToString(),
+                        };
+                    countries.Add(t);
+                    }
+                }
+            }
+            return countries;
+        }
+
 
         public HomeController(ILogger<HomeController> logger)
         {

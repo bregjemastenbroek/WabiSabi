@@ -5,12 +5,15 @@ using System.Threading.Tasks;
 
 namespace Wabisabi.database
 {
-    public class Dish
+    public class Country
     {
         public int Id { get; set; }
 
         public string Naam { get; set; }
 
-        public Decimal Prijs { get; set; }
+        public string Beschrijving { get; set; }
+
+        public string Afbeelding { get; set; }
+
     }
 }
