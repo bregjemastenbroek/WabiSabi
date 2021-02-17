@@ -136,10 +136,6 @@ body {
     width: 50%;
 }
 
-.contact1 {
-    text-align: right;
-}
-
 .img-tile {
     background-size: cover;
     width: 25%;
@@ -147,3 +143,10 @@ body {
     float: left;
 }
 
+.contact1 {
+    width: 450px;
+    border: 1px white;
+    padding: 50px;
+    margin: -20px;
+    float: right;
+}
