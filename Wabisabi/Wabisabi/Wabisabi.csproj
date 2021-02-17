@@ -17,4 +17,12 @@
     <PackageReference Include="MySql.Data" Version="8.0.23" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Afbeeldingen\India\" />
+    <Folder Include="wwwroot\Afbeeldingen\Indonesië\" />
+    <Folder Include="wwwroot\Afbeeldingen\Korea\" />
+    <Folder Include="wwwroot\Afbeeldingen\Vietnam\" />
+    <Folder Include="wwwroot\Afbeeldingen\Thailand\" />
+  </ItemGroup>
+
 </Project>
