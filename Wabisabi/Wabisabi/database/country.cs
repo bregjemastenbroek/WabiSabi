@@ -13,7 +13,14 @@ namespace Wabisabi.database
 
         public string Beschrijving { get; set; }
 
-        public string Afbeelding { get; set; }
+        public string Afbeelding1 { get; set; }
+
+        public string Afbeelding2 { get; set; }
+
+        public string Afbeelding3 { get; set; }
+
+        public string Afbeelding4 { get; set; }
+
 
     }
 }

@@ -62,10 +62,13 @@ namespace Wabisabi.Controllers
                     {
                         Country t = new Country
                         {
-                             Id = Convert.ToInt32(reader["Id"]),
-                             Naam = reader["Naam"].ToString(),
-                             Beschrijving = reader["Beschrijving"].ToString(),
-                             Afbeelding = reader["Afbeelding"].ToString(),
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Beschrijving = reader["Beschrijving"].ToString(),
+                            Afbeelding1 = reader["Afbeelding1"].ToString(),
+                            Afbeelding2 = reader["Afbeelding2"].ToString(),
+                            Afbeelding3 = reader["Afbeelding3"].ToString(),
+                            Afbeelding4 = reader["Afbeelding4"].ToString(),
                         };
                         countries.Add(t);
                     }
@@ -127,9 +130,9 @@ namespace Wabisabi.Controllers
         }
 
         [Route("Japan")]
-        public IActionResult Japan()
+        public IActionResult Japan(Country model)
         {
-            return View();
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

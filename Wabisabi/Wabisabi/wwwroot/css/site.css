@@ -141,6 +141,8 @@ body {
     width: 25%;
     height: 300px;
     float: left;
+    position: relative;
+    z-index: 101;
 }
 
 .contact1 {
@@ -149,4 +151,17 @@ body {
     padding: 50px;
     margin: -20px;
     float: right;
+}
+
+h2 {
+    font-size: 40px;
+    width: 250px;
+    height: 250px;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: 100;
 }

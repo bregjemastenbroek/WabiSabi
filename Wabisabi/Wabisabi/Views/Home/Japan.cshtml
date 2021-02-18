@@ -1,10 +1,19 @@
-﻿@{
+﻿@using Wabisabi.database
+@model Country 
+@{
     ViewData["Title"] = "Japan";
 }
 
+<div style="background-image:@Model.Afbeelding1" class="img-tile"></div>
+<div style="background-image:@Model.Afbeelding2" class="img-tile"></div>
+<div style="background-image:@Model.Afbeelding3" class="img-tile"></div>
+<div style="background-image:@Model.Afbeelding4" class="img-tile"></div>
 
-<div style="background-image: url(/Afbeeldingen/Japan/japan1.jpg)" class="img-tile"></div>
-<div style="background-image: url(/Afbeeldingen/Japan/japan2.jpg)" class="img-tile"></div>
-<div style="background-image: url(/Afbeeldingen/Japan/japan3.jpg)" class="img-tile"></div>
-<div style="background-image: url(/Afbeeldingen/Japan/japan4.jpg)" class="img-tile"></div>
+<h3>Japan</h3>
+<h2>@Model.Beschrijving</h2>
 
+<img src="@Model.Afbeelding"/>
+<img src="@Model.Afbeelding"/>
+<img src="@Model.Afbeelding"/>
+<img src="@Model.Afbeelding"/>
+<img src="@Model.Afbeelding"/>
