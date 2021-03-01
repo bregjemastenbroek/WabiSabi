@@ -47,14 +47,14 @@ namespace Wabisabi.Controllers
             return dishes;
         }
 
-        private List<Country> GetCountries()
+        private Country GetCountry(string naam)
         {
             List<Country> countries = new List<Country>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from Countries", conn);
+                MySqlCommand cmd = new MySqlCommand($"select * from country where naam = '{naam}'", conn);
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -74,7 +74,7 @@ namespace Wabisabi.Controllers
                     }
                 }
             }
-            return countries;
+            return countries.First();
         }
 
 
@@ -93,45 +93,11 @@ namespace Wabisabi.Controllers
             return View();
         }
 
-        [Route("China")]
-        public IActionResult China()
+        [Route("country/{id}")]
+        public IActionResult Country(string id)
         {
-            return View();
-        }
+            var model = GetCountry(id);
 
-        [Route("Vietnam")]
-        public IActionResult Vietnam()
-        {
-            return View();
-        }
-
-        [Route("India")]
-        public IActionResult India()
-        {
-            return View();
-        }
-
-        [Route("Indonesie")]
-        public IActionResult Indonesie()
-        {
-            return View();
-        }
-
-        [Route("Thailand")]
-        public IActionResult Thailand()
-        {
-            return View();
-        }
-
-        [Route("Korea")]
-        public IActionResult Korea()
-        {
-            return View();
-        }
-
-        [Route("Japan")]
-        public IActionResult Japan(Country model)
-        {
             return View(model);
         }
 

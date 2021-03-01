@@ -1,7 +1,7 @@
 ﻿@using Wabisabi.database
 @model Country 
 @{
-    ViewData["Title"] = "Japan";
+    ViewData["Title"] = Model.Naam;
 }
 
 <div style="background-image:@Model.Afbeelding1" class="img-tile"></div>
@@ -11,9 +11,3 @@
 
 <h3>Japan</h3>
 <h2>@Model.Beschrijving</h2>
-
-<img src="@Model.Afbeelding"/>
-<img src="@Model.Afbeelding"/>
-<img src="@Model.Afbeelding"/>
-<img src="@Model.Afbeelding"/>
-<img src="@Model.Afbeelding"/>
