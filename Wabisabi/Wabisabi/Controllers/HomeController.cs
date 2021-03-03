@@ -101,6 +101,12 @@ namespace Wabisabi.Controllers
             return View(model);
         }
 
+        [Route("Bestel")]
+        public IActionResult Bestel()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
