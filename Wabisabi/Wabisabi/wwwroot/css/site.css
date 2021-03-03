@@ -174,3 +174,12 @@ h3 {
     float: left;
     background-color: white; 
 }
+
+.bestel2 {
+    width: 450px;
+    border: 1px white;
+    padding: 50px;
+    margin: 20px;
+    float: left;
+    background-color: white;
+}
