@@ -1,6 +1,8 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+
 .menubalk {
     width: 200px; /* Set a width if you like */
     overflow: hidden;
@@ -60,10 +62,29 @@ a {
 html {
   font-size: 14px;
 }
+@media (max-width: 855px) {
+    .titel {
+        font-size: 29px;
+        letter-spacing: 0px;
+    }
+
+}
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img-tile {
+        background-size: cover;
+        width: 45%;
+        height: 300px;
+        float: left;
+        position: relative;
+        z-index: 101;
+    }
 }
 
 .border-top {
@@ -115,6 +136,8 @@ body {
     padding: 16px;
     font-weight: 100;
     font-size: 29px;
+    text-tansform: uppercase;
+    letter-spacing: 5px;
 }
 
 .top-bar {
