@@ -74,7 +74,7 @@ namespace Wabisabi.Controllers
                     }
                 }
             }
-            return countries.First();
+            return countries.FirstOrDefault();
         }
 
 
