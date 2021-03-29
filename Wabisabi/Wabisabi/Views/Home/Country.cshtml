@@ -2,6 +2,7 @@
 @model Country
 @{
     ViewData["Title"] = Model.Naam;
+    List<Dish> dishes = ViewData["dishes"] as List<Dish>;
 }
 
 <div style="background-image:@Model.Afbeelding1" class="img-tile"></div>
@@ -11,4 +12,11 @@
 
 <h2>@Model.Naam</h2>
 <h3>@Model.Beschrijving</h3>
+
+@if(dishes != null) { 
+    foreach(var dish in dishes)
+    {
+        <p>@dish.Naam</p>
+    }
+}
 

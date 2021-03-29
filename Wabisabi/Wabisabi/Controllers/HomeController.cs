@@ -77,7 +77,36 @@ namespace Wabisabi.Controllers
             return countries.FirstOrDefault();
         }
 
-        
+        private List<Dish> GetDishesForCountry(int countryId)
+        {
+            List<Dish> dishes = new List<Dish>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select * from dish " +
+                    $"join country_dish on dish.id = country_dish.dish_id " +
+                    $"where country_id = '{countryId}'", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Dish d = new Dish
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Afbeelding = reader["Afbeelding"].ToString(),
+                            Prijs = Decimal.Parse(reader["Prijs"].ToString()),
+                        };
+                        dishes.Add(d);
+                    }
+                }
+            }
+            return dishes;
+        }
+
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -97,6 +126,8 @@ namespace Wabisabi.Controllers
         public IActionResult Country(string id)
         {
             var model = GetCountry(id);
+            var dishes = GetDishesForCountry(model.Id);
+            ViewData["dishes"] = dishes;
 
             return View(model);
         }
