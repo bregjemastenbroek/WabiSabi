@@ -16,7 +16,12 @@
 @if(dishes != null) { 
     foreach(var dish in dishes)
     {
-        <p>@dish.Naam</p>
+        <div class="dishnaam">
+            <p>@dish.Naam</p>
+        </div>
+        <div class="dishafbeelding">
+            <img src="@dish.Afbeelding" />
+        </div>
     }
 }
 
