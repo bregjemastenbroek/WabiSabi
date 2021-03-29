@@ -77,7 +77,7 @@ namespace Wabisabi.Controllers
             return countries.FirstOrDefault();
         }
 
-
+        
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;

@@ -10,7 +10,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Views\Home\.htaccess" />
     <None Remove="Views\Home\htmlpage.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\Home\.htaccess" />
   </ItemGroup>
 
   <ItemGroup>
