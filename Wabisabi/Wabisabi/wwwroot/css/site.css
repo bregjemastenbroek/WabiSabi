@@ -231,3 +231,15 @@ h9 {
         width: 100px;
 }
 */
+
+p100 {
+    font-size: 400px ;
+    color: white ;
+    font-weight: 200 ;
+}
+
+p200 {
+    font-size: 30px;
+    color: white;
+    font-weight: 20;
+}

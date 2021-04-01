@@ -36,6 +36,9 @@ namespace Wabisabi
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseStatusCodePagesWithReExecute("/Home/HandleError/{0}");
+
             app.UseStaticFiles();
 
             app.UseRouting();
